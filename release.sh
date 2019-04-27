@@ -12,4 +12,8 @@ cp -r css img index.html favicon.ico dist/
 mkdir -p dist/{js,webfonts}
 sed 's/\.js">/.min.js">/' index.html > dist/index.html
 cp js/*.min.js dist/js/
-cp webfonts/*.woff2 dist/webfonts/
+cp -r fonts dist/
+
+if [ -d .netlify ] ; then
+  netlify deploy --prod -d dist
+fi
