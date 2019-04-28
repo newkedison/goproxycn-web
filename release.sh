@@ -1,6 +1,6 @@
 rm -rf dist
 cd js
-rm *.min.js *.map
+rm -f *.min.js *.map
 for f in * ; do
   min=$(echo ${f/js/min.js})
   uglifyjs $f --compress --mangle --source-map --output $min
