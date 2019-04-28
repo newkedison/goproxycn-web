@@ -73,4 +73,6 @@
     });
   });
 
+  $('#totalCount').countup(12345)
+
 })(jQuery); // End of use strict
