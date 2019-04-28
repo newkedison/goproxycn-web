@@ -9,7 +9,7 @@ cd ..
 
 mkdir dist
 cp -r css img index.html favicon.ico dist/
-mkdir -p dist/{js,webfonts}
+mkdir -p dist/js
 sed 's/\.js">/.min.js">/' index.html > dist/index.html
 cp js/*.min.js dist/js/
 cp -r fonts dist/
